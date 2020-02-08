@@ -38,7 +38,7 @@ def main(args):
      'dropout': 0.1,
     
      'lstm': {
-      'use_skip_connections': True
+      'use_skip_connections': True,
       'projection_dim': 128,
       'cell_clip': 3,
       'proj_clip': 3,
