@@ -13,40 +13,42 @@ def main(args):
 
     # define the options
     batch_size = 128  # batch size for each GPU
-    n_gpus = 3
+    n_gpus = 1
 
     # number of tokens in training data (this for 1B Word Benchmark)
     n_train_tokens = 768648884
 
     options = {
      'bidirectional': True,
-
-     'char_cnn': {'activation': 'relu',
-      'embedding': {'dim': 16},
-      'filters': [[1, 32],
-       [2, 32],
-       [3, 64],
-       [4, 128],
-       [5, 256],
-       [6, 512],
-       [7, 1024]],
-      'max_characters_per_token': 50,
-      'n_characters': 261,
-      'n_highway': 2},
+     'char_cnn': {
+        'activation': 'relu',
+        'embedding': {'dim': 16},
+        'filters': [[1, 32],
+        [2, 32],
+        [3, 64],
+        [4, 128],
+        [5, 256],
+        [6, 512],
+        [7, 1024]],
+        'max_characters_per_token': 50,
+        'n_characters': 262,
+        'n_highway': 1
+      },
     
      'dropout': 0.1,
     
      'lstm': {
+      'use_skip_connections': True
+      'projection_dim': 128,
       'cell_clip': 3,
-      'dim': 4096,
-      'n_layers': 2,
       'proj_clip': 3,
-      'projection_dim': 512,
-      'use_skip_connections': True},
+      'dim': 1024,
+      'n_layers': 2
+      },
     
      'all_clip_norm_val': 10.0,
     
-     'n_epochs': 10,
+     'n_epochs': 4,
      'n_train_tokens': n_train_tokens,
      'batch_size': batch_size,
      'n_tokens_vocab': vocab.size,
