@@ -15,7 +15,7 @@ def main(args):
     batch_size = 128  # batch size for each GPU
     n_gpus = 2
 
-    # number of tokens in training data (this for 1B Word Benchmark)
+    # number of tokens in training data (this for indonesia wikidump)
     n_train_tokens = 103693313
 
     options = {
