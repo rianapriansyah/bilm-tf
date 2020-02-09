@@ -52,8 +52,9 @@ def main(args):
      'n_train_tokens': n_train_tokens,
      'batch_size': batch_size,
      'n_tokens_vocab': vocab.size,
-     'unroll_steps': 20
+     'unroll_steps': 20,
      #'n_negative_samples_batch': 8192,
+     'n_negative_samples_batch': 1024,
     }
 
     prefix = args.train_prefix
