@@ -16,7 +16,7 @@ def main(args):
     n_gpus = 1
 
     # number of tokens in training data (this for indonesia wikidump)
-    n_train_tokens = 103693313
+    n_train_tokens = 25766422
 
     options = {
      'bidirectional': True,
@@ -53,7 +53,7 @@ def main(args):
      'batch_size': batch_size,
      'n_tokens_vocab': vocab.size,
      'unroll_steps': 20,
-     'n_negative_samples_batch': 8192,
+     'n_negative_samples_batch': 8192
      #'n_negative_samples_batch': 1024,
     }
 
