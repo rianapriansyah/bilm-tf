@@ -142,7 +142,7 @@ class LanguageModel(object):
         n_chars = cnn_options['n_characters']
         if n_chars != 261 and self.is_training == True:
             raise InvalidNumberOfCharacters(
-                    "Set n_characters=261 for training see the README.md"
+                    "Set n_characters=261 for training see the README.md" + self.is_training
             )
         if cnn_options['activation'] == 'tanh':
             activation = tf.nn.tanh
