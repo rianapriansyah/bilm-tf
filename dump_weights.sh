@@ -8,4 +8,4 @@
 
 srun python bin/dump_weights.py \
     --save_dir /home/m418662/elmo/output
-	--outfile /home/m418662/elmo/weights.hdf5
+	--outfile /home/m418662/elmo
