@@ -31,7 +31,7 @@ def main(args):
         [6, 512],
         [7, 1024]],
         'max_characters_per_token': 50,
-        'n_characters': 261,
+        'n_characters': 262,
         'n_highway': 1
       },
     
