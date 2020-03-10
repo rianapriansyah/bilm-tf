@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import setuptools
 
-with open("/home/m418662/bilm-tf/README.md", "r") as fh:
+with open("/Users/rianapriansyah/Workspace/bilm-tf/README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
