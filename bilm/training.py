@@ -140,10 +140,10 @@ class LanguageModel(object):
         max_chars = cnn_options['max_characters_per_token']
         char_embed_dim = cnn_options['embedding']['dim']
         n_chars = cnn_options['n_characters']
-        if n_chars != 261 and self.is_training == True:
-            raise InvalidNumberOfCharacters(
-                    "Set n_characters=261 for training see the README.md" + self.is_training
-            )
+        #if n_chars != 261:
+        #    raise InvalidNumberOfCharacters(
+        #            "Set n_characters=261 for training see the README.md" + self.is_training
+        #    )
         if cnn_options['activation'] == 'tanh':
             activation = tf.nn.tanh
         elif cnn_options['activation'] == 'relu':
