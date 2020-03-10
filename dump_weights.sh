@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-#SBATCH --job-name=test_elmo
-#SBATCH --output=test_elmo.txt
+#SBATCH --job-name=dump_weights
+#SBATCH --output=dump_weights.txt
 #
 #SBATCH --nodes=1
 #SBATCH --time=4320:00
